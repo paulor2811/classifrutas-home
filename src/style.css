@@ -1,0 +1,178 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+.button {
+    @apply inline-flex items-center px-4 py-2 bg-gray-100 disabled:bg-gray-100 disabled:text-gray-300 text-gray-800 border border-transparent rounded-md font-semibold text-sm tracking-normal transition ease-in-out duration-150 ring-gray-300;
+}
+
+.button.btn-sm {
+    @apply leading-none px-1 py-0;
+}
+
+
+.button:hover {
+    @apply bg-gray-200 disabled:bg-gray-100 disabled:text-gray-300;
+}
+
+.button:active, .button:focus {
+    @apply bg-gray-300 ring disabled:bg-gray-100 disabled:text-gray-300;
+}
+
+.button.button-primary {
+    @apply bg-indigo-500 text-white !important;
+}
+
+.button-primary:hover, .button.button-primary:active, .button.button-primary:focus {
+    @apply bg-indigo-600 !important;
+}
+
+.button.button-primary:disabled {
+    @apply bg-indigo-300 !important;
+}
+
+
+.button.button-success {
+    @apply bg-green-500 text-white !important;
+}
+
+.button-success:hover, .button.button-success:active, .button.button-success:focus {
+    @apply bg-green-600 !important;
+}
+
+.button.button-success:disabled {
+    @apply bg-green-400 !important;
+}
+
+
+.button.button-danger {
+    @apply bg-red-500 text-white !important;
+}
+
+.button-danger:hover, .button.button-danger:active, .button.button-danger:focus {
+    @apply bg-red-600 !important;
+}
+
+.button.button-danger:disabled {
+    @apply bg-red-200 !important;
+}
+
+
+.action-button {
+    @apply inline-flex items-center px-1 py-0 text-gray-800 border border-transparent rounded;
+    @apply bg-gray-100 !important;
+}
+
+.action-button:hover {
+    @apply bg-gray-200 !important;
+}
+
+/* Carrossel com Vídeo */
+.carousel-container {
+    height: 300px; /* Altura do carrossel */
+    position: relative;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Escurece o vídeo */
+    z-index: 0;
+}
+
+.span-price {
+    background-color: white;
+    position: absolute;
+    bottom: 20px; /* Ajuste conforme necessário */
+    left: 15px; /* Ajuste conforme necessário */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex; /* Utiliza o flexbox */
+    align-items: center; /* Alinha o texto verticalmente no centro */
+    justify-content: center; /* Alinha o texto horizontalmente no centro */
+    flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+    .span-price  {
+        width: auto;
+    }
+}
+.original-price {
+    color: black; /* Cor do texto */
+    text-decoration: line-through;
+    padding: 5px; /* Espaçamento interno */
+}
+.discount-price {
+    color: #772122;
+    text-decoration: none;
+    left: 10px;
+    font-weight: bold;
+}
+.normal-price {
+    color: #222222;
+    text-decoration: none;
+    left: 10px;
+    font-weight: bold;
+}
+.component-title h4 {
+    font-weight: bold;
+    font-size: 30px;
+}
+.paragraph {
+    display: flex;
+    align-items: center; /* Alinha os p's verticalmente no centro */
+    gap: 10px; /* Espaço entre os p's */
+}
+.filter {
+    font-family: Arial;
+    color: #772122;
+    font-size: 15px;
+    margin-left: auto; /* Empurra o segundo p para o final da linha */
+    font-weight: bold;
+}
+.description {
+    font-family: Arial;
+    color: #5C525B;
+    font-size: 15px;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between; /* Garante que as imagens fiquem separadas de forma igual */
+    gap: 10px; /* Ajuste o espaçamento entre as imagens */
+}
+@media (max-width: 767px) {
+    .d-flex {
+        flex-direction: column; /* Alinha as imagens verticalmente em telas pequenas */
+        gap: 20px; /* Ajuste o espaçamento para telas menores */
+    }
+}
+.img-fluid {
+    max-width: 100%; /* Limita a largura da imagem ao tamanho do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.imagem-grande {
+    width: 100%;
+    border-radius: 5%;
+}
+.imagem-pequena {
+    width: 100%;
+    border-radius: 10%;
+}
+@media (max-width: 768px) {
+    .imagem-grande {
+        margin: 5px;
+    }
+    .imagem-pequena {
+        margin: 5px;
+    }
+}
+.imagem-container {
+    position: relative; /* Adiciona um contexto de posicionamento relativo */
+}
